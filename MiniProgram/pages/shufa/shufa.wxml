@@ -1,0 +1,30 @@
+<!--pages/shufa/shufa.wxml-->
+<!-- 背景图 -->
+<view class="shufabackground">
+<image src="/images/shufa2.png" mode="scaleToFill" class="backpic"></image>
+</view>
+<view class="all">
+<view class="title" >{{message.title}}</view>
+<!-- 书法图片 -->
+<view class="picture" bindlongpress="longPress"><image src="{{img}}" mode="aspectFill"></image></view>
+<!-- 科普 -->
+<view class="kepu" bindtap="showContent"><image src="/images/kepu4.png" mode="widthFix"></image></view>
+<view class="kepucontent" wx:if="{{showcontent}}">
+<view class="closecontent" bindtap="closeContent"><image src="/images/chahao.png"  mode="widthFix"></image></view>
+<text id="title">介绍</text> 
+<text user-select>{{content}}</text>
+</view>
+<!-- 检索 -->
+<view class="research" bindtap="showRearch"><image src="/images/research.png" mode="widthFix"></image>
+</view>
+<view class="researchcontent" wx:if="{{showresearch}}">
+<view class="reinput"><input type="text" placeholder="输入你感兴趣的" bindblur="researchbegin" /></view>
+<view class="closeresearch" bindtap="closeResearch">取消</view>
+<view class="alljieguo">
+<view class="jieguo" wx:for="{{jieguo}}" wx:key="item">
+<text bindtap="detail" data-index="{{index}}">{{item.title}}</text>
+</view>
+</view>
+
+</view>
+</view>

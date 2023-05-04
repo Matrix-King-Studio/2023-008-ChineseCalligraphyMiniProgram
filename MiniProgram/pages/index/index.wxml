@@ -1,0 +1,51 @@
+<!--index.wxml-->
+<!-- 背景图 -->
+<view class="homebackground">
+<image src="/images/shufa.png" mode="scaleToFill" class="backpic"></image>
+</view>
+<view class="all">
+
+<!-- 回到今日 -->
+<view class="backtoday" bindtap="backToday" style="display:{{showbutton}}">回到今日</view>
+<!-- 封面图 -->
+<view class="shufa" bindtap="goToShufa" bindlongpress="longPress"><image src="{{message.image_url}}" mode="aspectFill"></image></view>
+<!-- 遮罩层 日期 -->
+<view class="cover" bindtap="goToShufa">
+<text class="day">{{nowday}}</text>
+<text class="month">{{chineseMonth}}</text>
+<text class="lunar">{{Nongli}}</text>
+</view>
+<!-- 日历 -->
+<view class="allcalendar" style="z-index: {{zindex}};" >
+
+<view class="{{calendarclass}}"  >
+    <view class="calendarTop">
+      <text class="calendarTopL" catchtap="prev">{{'<'}}</text>
+      <text class="calendarTopC">{{nowYear}}年{{nowMonthStr}}月</text>
+      <text class="calendarTopR" catchtap="next">{{'>'}}</text>
+    </view>
+    <view class="calendarWeek">
+      <text class="calendarWeekItem" wx:for="{{weekList}}" wx:key="item">{{item}}</text>
+    </view>
+    <view class="calendarDate">
+      <text class="calendarDateItem {{item.now ? 'dateItemNow' : ''}} {{item.gray ? 'dateItemGray' : ''}} {{nowindex==index?'choosedItem':''}}" bindtap="chooseDate"  wx:for="{{month}}" wx:key="index" data-index="{{index}}" data-text="{{text}}">{{item.text}}</text>
+    </view>
+  </view>
+<view class="rili" bindtap="rili" animation="{{animationdata}}"><image src="/images/rili.png" mode="widthFix"></image></view>
+</view>
+
+
+<!-- 检索 -->
+<view class="research" bindtap="showResearch"><image src="/images/research.png" mode="widthFix"></image>
+</view>
+<view class="researchcontent" wx:if="{{showresearch}}">
+<view class="reinput"><input type="text" placeholder="输入你感兴趣的" bindblur="researchbegin" /></view>
+<view class="closeresearch" bindtap="closeResearch">取消</view>
+<view class="alljieguo">
+<view class="jieguo" wx:for="{{jieguo}}" wx:key="item">
+<text bindtap="detail" data-index="{{index}}">{{item.title}}</text>
+</view>
+</view>
+</view>
+<view class="kind" bindtap="chooseKind">分类</view>
+</view>

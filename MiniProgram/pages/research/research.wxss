@@ -1,0 +1,50 @@
+/* pages/research.wxss */
+.shufabackground{
+    display: flex;
+    height: 100%;
+    height: 100vh;
+    align-content: center;
+    justify-content: center;
+    z-index: -1;
+  }
+.backpic{
+    width: 100%;
+    height: 100%;
+    display: initial;
+}
+.box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.knowledge{
+    width: 700rpx;
+    height: 1100rpx;
+    margin: 50rpx auto;
+    background-color: rgba(230, 223, 204, 0.7);
+    border-radius: 10rpx;
+    text-overflow: ellipsis;
+    overflow: auto;
+    color: rgb(110, 109, 105);
+    
+}
+.title{
+    margin: 40rpx auto;
+    font-size: 46rpx;
+    text-align: center;
+    width: 80%;
+}
+.auther{
+    margin: 30rpx auto;
+    font-size: 42rpx;
+    text-align: center;
+    
+}
+.content{
+    margin: 30rpx auto;
+    width: 95%;
+    font-size: 40rpx;
+
+}

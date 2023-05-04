@@ -1,0 +1,15 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/shufa/shufa",
+        "pages/research/research"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#dcccb0",
+        "navigationBarTitleText": "i书法",
+        "navigationBarTextStyle": "black"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

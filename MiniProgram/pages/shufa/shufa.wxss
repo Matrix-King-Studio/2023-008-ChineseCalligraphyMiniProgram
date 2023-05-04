@@ -1,0 +1,164 @@
+/* pages/shufa/shufa.wxss */
+@keyframes showcontent{
+  0% {
+      transform: translate(-50%,-50%);
+  }
+  100% {
+      transform: translate(0,0);
+  }
+}
+@keyframes showresearch{
+  0% {
+      transform: translate(50%,-50%);
+  }
+  100% {
+      transform: translate(0,0);
+  }
+}
+.shufabackground{
+    display: flex;
+    height: 100%;
+    height: 100vh;
+    align-content: center;
+    justify-content: center;
+    z-index: -1;
+  }
+.backpic{
+    width: 100%;
+    height: 100%;
+    display: initial;
+}
+.all{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.picture{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    
+
+}
+.title{
+
+  margin: 120rpx auto;
+  font-size: 50rpx;
+  color: rgb(104, 98, 83);
+  width: 80%;
+  text-align: center;
+}
+.picture image{
+    width: 100%;
+}
+.kepu{ 
+    position: absolute;
+    top: 20rpx;
+    left: 20rpx;
+    width: 100rpx;
+  }
+.kepu image{
+    width: 90rpx;
+    
+}
+.kepucontent{
+    position: absolute;
+    top: 20rpx;
+    left: 26rpx;
+    height: 1100rpx;
+    width: 700rpx;
+    background-color: rgba(243, 229, 219, 0.9);
+    z-index: 999;
+    border-radius: 15rpx;
+    box-shadow: 2rpx 2rpx 5rpx #eee;
+    color: rgba(129, 77, 8);
+    animation: showcontent .5s ease;
+    text-overflow: ellipsis;
+    overflow: auto;
+    padding: 5rpx;
+}
+.closecontent{
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  width: 50rpx;
+  text-align: center;
+}
+.closecontent image{
+  width: 50rpx;
+}
+#title{
+  display: block;
+  width: 700rpx; 
+  text-align: center;
+  font-size: 48rpx;
+  margin: 50rpx 0;
+  display: flex;
+  justify-content: center;
+}
+.research{
+    position: absolute;
+    top: 35rpx;
+    right: 25rpx;
+    width: 70rpx;
+  }
+.research image{
+    width: 76rpx;
+  }
+.researchcontent{
+    position: absolute;
+    top: 20rpx;
+    left: 26rpx;
+    height: 1100rpx;
+    width: 700rpx;
+    background-color: rgba(243, 229, 219, 0.9);
+    z-index: 999;
+    border-radius: 15rpx;
+    box-shadow: 2rpx 2rpx 5rpx #eee;
+    color: rgba(129, 77, 8);
+    animation: showresearch .5s ease; 
+}
+.closeresearch{
+  position: absolute;
+    top: 32rpx;
+    right: 26rpx;
+    text-decoration: underline;
+}
+.reinput{
+  width: 540rpx;
+  height: 75rpx;
+  border: 1rpx solid rgb(141, 105, 6);
+  line-height: 75rpx;
+  padding-left: 10rpx;
+  border-radius: 26rpx;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+.reinput input{
+  display: inline-block;
+  height: 75rpx;
+  width: 540rpx;
+  line-height: 75rpx;
+}
+.alljieguo{
+  height: 982rpx;
+  margin-top: 20rpx;
+  text-overflow: ellipsis;
+  overflow:auto;
+}
+.jieguo{
+  width: 95%;
+  height: 80rpx;
+  border-top: 1rpx solid #bdaa97;
+  border-bottom: 1rpx solid #bdaa97;
+  margin: 0 10rpx;
+  font-size: 42rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 80rpx;
+}

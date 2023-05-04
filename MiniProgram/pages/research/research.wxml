@@ -1,0 +1,17 @@
+<!--pages/research.wxml-->
+<view class="shufabackground">
+<image src="/images/shufa2.png" mode="scaleToFill" class="backpic"></image>
+</view>
+<view class="box">
+<view class="knowledge">
+<view class="title">
+<text user-select="">{{title}}</text>
+</view>
+<view class="auther">
+<text user-select="">{{author}}</text>
+</view>
+<view class="content">
+<text user-select="">{{content}}</text>
+</view>
+</view>
+</view>

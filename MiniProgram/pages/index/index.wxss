@@ -1,0 +1,366 @@
+@keyframes opencalendar{
+  0% {
+      transform: translateY(-100%);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+@keyframes closecalendar{
+  from{
+    transform: translateY(0%);
+  }
+  to{
+    transform: translateY(-100%);
+  }
+}
+@keyframes showresearch{
+  0% {
+      transform: translate(50%,-50%);
+  }
+  100% {
+      transform: translate(0,0);
+  }
+}
+
+.homebackground{
+  display: flex;
+  height: 100%;
+  height: 100vh;
+  align-content: center;
+  justify-content: center;
+  z-index: -1;
+}
+.backpic{
+  width: 100%;
+  height: 100%;
+  display: initial;
+}
+.all{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.backtoday{
+  position: absolute;
+  top: 35rpx;
+  left: 280rpx;
+  background-color: #c0ae7d9a;
+  width: 200rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 20rpx;
+  box-shadow: 3rpx 3rpx 10rpx rgb(109, 103, 91);
+  color: rgb(63, 62, 62);
+  z-index: 999;
+}
+.shufa{
+  position: absolute;
+  top: 150rpx;
+  left: 76rpx;
+  width: 600rpx;
+  height: 900rpx;
+  box-shadow: 5rpx 4rpx 15rpx rgb(70, 69, 69);
+  border-radius: 5rpx;
+
+
+}
+.shufa image{
+  width: 600rpx;
+  height: 900rpx;
+  border-radius: 5rpx;
+}
+.cover{
+  position: absolute;
+  top: 150rpx;
+  left: 76rpx;
+  width: 600rpx;
+  height: 450rpx;
+  background: rgba(245, 241, 234, 0.7);
+  box-shadow: 0 2rpx 6rpx rgb(245, 232, 195);
+  text-align: center;
+  border-radius: 5rpx;
+  z-index: 5;
+}
+.day{
+  /* position: absolute;
+  top: 60rpx;
+  left: 78rpx; */
+  /* display: inline-block; */
+  display: flex;
+  justify-content: center;
+  margin-top: 30rpx;
+  font-size: 200rpx;
+  color: rgb(105, 98, 84);
+}
+.month{
+  position: absolute;
+  top: 300rpx;
+  left: 15rpx;
+  color: rgb(105, 98, 84);
+  font-size: 46rpx;
+  
+}
+.lunar{
+  position: absolute;
+  top: 365rpx;
+  left: 15rpx;
+  color: rgb(105, 98, 84);
+  font-size: 40rpx;
+}
+
+
+
+/* 日历开始 */
+.rili{
+  position: absolute;
+  left: 5rpx;
+  top: 0rpx;
+  width: 60rpx;
+  /* animation: rili .3s ease-in both;  */
+}
+.rili image{
+  width: 60rpx;
+  
+  
+  
+}
+.allcalendar{
+  position: absolute;
+  top: 0rpx;
+  left: 16rpx;
+  width: 720rpx;
+  
+  
+}
+.opencalendar{
+  display: block;
+  width: 720rpx;
+  border: 1rpx solid #00000005;
+  border-radius:0 0 10rpx 10rpx;
+  background-color: #faf4ee;
+  margin: 0 auto;
+  
+  animation: opencalendar .3s ease-in ;
+  
+
+}
+.closecalendar{
+  display: block;
+  width: 720rpx;
+  border: 1rpx solid #00000005;
+  border-radius:0 0 10rpx 10rpx;
+  background-color: #faf4ee;
+  margin: 0 auto;
+  
+  animation: closecalendar .3s ease-in both;
+  overflow: hidden;
+  
+
+}
+.calendarTop{
+  padding-top: 22rpx;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.calendarTopL{
+  font-size: 32rpx;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 400;
+  color: #333333;
+  height: 36rpx;
+  line-height: 36rpx;
+  position: absolute;
+  left: 34rpx;
+  top: 22rpx;
+}
+.calendarTopC{
+  font-size: 26rpx;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #333333;
+  height: 36rpx;
+  line-height: 36rpx;
+}
+.calendarTopR{
+  font-size: 32rpx;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 400;
+  color: #333333;
+  height: 36rpx;
+  line-height: 36rpx;
+  position: absolute;
+  right: 34rpx;
+  top: 22rpx;
+}
+.calendarWeek{
+  display: flex;
+  flex-direction: row;
+  padding-top: 24rpx;
+  padding-left: 22rpx;
+}
+.calendarWeekItem{
+  width: 60rpx;
+  height: 60rpx;
+  font-size: 20rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #999999;
+  line-height: 60rpx;
+  text-align: center;
+  margin-left: 35rpx;
+}
+.calendarDate{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 22rpx;
+  
+}
+.calendarDateItem{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #333333;
+  line-height: 60rpx;
+  text-align: center;
+  margin-left: 35rpx;
+  margin-top: 20rpx;
+}
+.dateItemNow{
+  background: #2E8CFF;
+  color: #FFFFFF;
+}
+.dateItemGray{
+  color: #CCCCCC;
+}
+.choosedItem{
+ background-color: rgb(247, 239, 214);
+}
+/* 检索 */
+.research{
+  position: absolute;
+  top: 35rpx;
+  right: 25rpx;
+  width: 70rpx;
+  z-index: 555; 
+}
+.research image{
+  width: 76rpx;
+}
+.researchcontent{
+  position: absolute;
+  top: 20rpx;
+  left: 26rpx;
+  height: 1100rpx;
+  width: 700rpx;
+  background-color: rgba(243, 229, 219, 0.9);
+  z-index: 999;
+  border-radius: 15rpx;
+  box-shadow: 2rpx 2rpx 5rpx #eee;
+  color: rgba(129, 77, 8);
+  animation: showresearch .5s ease; 
+}
+.closeresearch{
+position: absolute;
+  top: 32rpx;
+  right: 26rpx;
+  text-decoration: underline;
+}
+.reinput{
+width: 540rpx;
+height: 75rpx;
+border: 1rpx solid rgb(141, 105, 6);
+line-height: 75rpx;
+padding-left: 10rpx;
+border-radius: 26rpx;
+margin-top: 20rpx;
+margin-left: 20rpx;
+}
+.reinput input{
+display: inline-block;
+height: 75rpx;
+width: 540rpx;
+line-height: 75rpx;
+}
+#one{
+  background-color: rgb(224, 220, 206);
+  width: 300rpx;
+  height: 90rpx;
+  border-radius: 46rpx;
+  font-size: 48rpx;
+  text-align: center;
+  line-height: 90rpx;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+
+}
+#two{
+  background-color: rgb(224, 219, 199);
+  width: 450rpx;
+  height: 135rpx;
+  border-radius: 69rpx;
+  font-size: 68rpx;
+  text-align: center;
+  line-height: 135rpx;
+  margin-top: 50rpx;
+  margin-left: 230rpx;
+
+}
+#three{
+  background-color: rgb(224, 220, 206);
+  width: 300rpx;
+  height: 90rpx;
+  border-radius: 46rpx;
+  font-size: 48rpx;
+  text-align: center;
+  line-height: 90rpx;
+  margin-top: 100rpx;
+  margin-left: 130rpx;
+
+}
+.alljieguo{
+  height: 982rpx;
+  margin-top: 20rpx;
+  text-overflow: ellipsis;
+  overflow:auto;
+}
+.jieguo{
+  width: 95%;
+  height: 80rpx;
+  border-top: 1rpx solid #bdaa97;
+  border-bottom: 1rpx solid #bdaa97;
+  margin: 0 10rpx;
+  font-size: 42rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 80rpx;
+}
+.kind{
+  margin: 0 auto;
+  margin-top: 1100rpx;
+  width: 200rpx;
+  height: 70rpx;
+  background-color: rgb(235, 226, 199,.7);
+  text-align: center;
+  line-height: 70rpx;
+  border-radius: 20rpx;
+  font-size: 38rpx;
+  color: rgb(87, 81, 81);
+  box-shadow: 3rpx 3rpx 10rpx rgb(131, 129, 129);
+
+}
+
+
+
+
+ 
+
